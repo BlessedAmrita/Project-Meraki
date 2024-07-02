@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+.hover-glow{
+    @apply transform hover:scale-110 transition-transform duration-200 hover:brightness-200 hover:drop-shadow-glow
+}
+
+.bg-gradient{
+    background:linear-gradient(to top,#030712,#111827),linear-gradient(to right,#030712,#111827),linear-gradient(to left,#030712,#111827);
+    background-blend-mode:overlay;
+}
+.hover-line::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    background: linear-gradient(to right,#e5dada,#7ea8be);
+    height: 2px;
+    width: 0%;
+    transition: 390ms;
+}
+.hover-line:hover::after{
+    left: -20%;
+    width: 140%;
+}
+}
