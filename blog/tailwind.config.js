@@ -23,7 +23,7 @@ export default {
         'starGlow': '0 0 10px #e5dd00e3',
       },
       animation:{
-        glow:"glow 1s ease-in-out infinite"
+        glow:"glow 1s ease-in-out infinite",
       },
       keyframes:{
         glow:{
@@ -33,7 +33,7 @@ export default {
           "50%":{
             filter: 'brightness(180%) drop-shadow(0 0 11px rgba(255, 255, 255, 1))'
           }
-        }
+        },
       },
     },
   },
