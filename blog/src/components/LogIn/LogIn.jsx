@@ -1,8 +1,11 @@
 import React from 'react'
+import BlogReadingPage from '../BlogReadingPage'
 
 function LogIn() {
   return (
-    <div>LogIn</div>
+    <div>
+      <BlogReadingPage/>
+    </div>
   )
 }
 

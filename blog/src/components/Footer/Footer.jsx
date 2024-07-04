@@ -6,7 +6,7 @@ import Container from "../container/Container"
 function Footer() {
   return (
     <>
-      <footer className="mt-auto font-roboto h-auto text-blush text-2xl tracking-wide bg-gradient">
+      <footer className="mt-auto font-roboto h-auto text-blush text-2xl tracking-wide bg-gradient border-t-[1px] border-t-gray-800">
         <Container>
           <div className="flex flex-col">
         <div className="top flex justify-center w-full gap-14 border-b-[1px] border-b-gray-800 pt-20 pb-10">
@@ -33,7 +33,7 @@ function Footer() {
             <div className=" flex flex-col items-center">
             <h3>Find me at</h3>
               <ul className="text-lg text-[#b8aeae] mt-5 flex flex-col gap-3 items-center">
-                <li>NIT Rourkela,769002 </li>
+                <li className="relative hover-line cursor-pointer">NIT Rourkela,769002 </li>
                 <img src="https://res.cloudinary.com/dpmlrxlzr/image/upload/v1719914768/icons8-google-maps-old_kj59jx.svg"
                 className="cursor-pointer h-10 hover-glow"/>
               </ul>
@@ -55,7 +55,7 @@ function Footer() {
             <h3 className=" font-allison text-8xl hover-glow">Play the Game !</h3>
           </div>
           <div className="flex pt-5">
-            <p className="">Made with <span className="inline-block animate-glow"> ✨ </span> by P.Amrita</p>
+            <p className=" text-2xl opacity-90 ">Made with <span className="inline-block opacity-100 animate-glow"> ✨ </span> by P.Amrita</p>
           </div>
         </div>
         </div>

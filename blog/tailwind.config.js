@@ -24,6 +24,8 @@ export default {
       },
       animation:{
         glow:"glow 1s ease-in-out infinite",
+        meraki:"meraki 2s ease-out",
+        layoutUp:"layoutUp 2s ease-out"
       },
       keyframes:{
         glow:{
@@ -34,6 +36,26 @@ export default {
             filter: 'brightness(180%) drop-shadow(0 0 11px rgba(255, 255, 255, 1))'
           }
         },
+        meraki:{
+          "0%":{
+            'padding-top':'0px',
+            'overflow-y':'clip',
+          },
+          "100%":{
+            'padding-top':'390px',
+            'overflow-y':'clip',
+          }
+        },
+        layoutUp:{
+          "0%":{
+            'padding-top':'300px',
+            'overflow-y':'clip',
+          },
+          "100%":{
+            'padding-top':'0px',
+            'overflow-y':'clip',
+          }
+        }
       },
     },
   },
