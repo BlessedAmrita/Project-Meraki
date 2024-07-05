@@ -1,0 +1,35 @@
+.buttonGlow:hover {
+  transition: all 300ms ease-out;
+  filter: drop-shadow(0 0 100px #e5dada93) drop-shadow(0 0 50px #e5dada93)
+    brightness(180%);
+  background-color: #e5dada;
+  color: black;
+}
+
+.typeWriter {
+  display: inline-block;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation:
+    typeWriter 8s steps(33, end) infinite forwards,
+    cursorBlink 0.8s step-end infinite;
+}
+
+@keyframes typeWriter {
+  0%,
+  25%,
+  100% {
+    width: 0ch;
+  }
+  50%,
+  90% {
+    width: 33ch;
+  }
+}
+
+@keyframes cursorBlink {
+  50% {
+    border-color: transparent;
+  }
+}

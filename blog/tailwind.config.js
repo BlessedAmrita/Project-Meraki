@@ -24,8 +24,10 @@ export default {
       },
       animation:{
         glow:"glow 1s ease-in-out infinite",
-        meraki:"meraki 2s ease-out",
-        layoutUp:"layoutUp 2s ease-out"
+        meraki:"meraki 1.4s ease-out",
+        layoutUp:"layoutUp 1.4s ease-out",
+        leftSlide:"leftSlide 1.4s ease-out",
+        reveal:"reveal 2s",
       },
       keyframes:{
         glow:{
@@ -55,7 +57,24 @@ export default {
             'padding-top':'0px',
             'overflow-y':'clip',
           }
-        }
+        },
+        leftSlide:{
+          "0%":{
+            'transform':'translateX(-20%)',
+          },
+          "100%":{
+            'transform':'translateX(0%)',
+          }
+        },
+        reveal:{
+          "0%":{
+            'opacity': '0%',
+          },
+          "100%":{
+            'opacity': '100%',
+          }
+        },
+        
       },
     },
   },
