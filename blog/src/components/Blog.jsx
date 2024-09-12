@@ -24,21 +24,31 @@ function Blog() {
                   </p>
                 </div>
               </div>
-              <div className="contentOfBlog text-xl px-5 pt-9 font-medium opacity-90 ">
+              <div className="contentOfBlog text-xl px-5 py-9 font-medium opacity-90 ">
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dicta nemo totam hic explicabo labore numquam minima et, a
-                  nesciunt reiciendis exercitationem, ex sint at inventore ad!
-                  Pariatur, quae illum beatae culpa ratione obcaecati, vitae
-                  reiciendis non, excepturi repellendus voluptatem omnis tempora
-                  maiores laboriosam quo? Consectetur ex molestias, incidunt
-                  autem facilis beatae delectus commodi eaque ea quod
-                  repellendus quaerat quia sunt maxime dignissimos! Magni
-                  temporibus nemo numquam perspiciatis dolorem quos omnis
-                  dignissimos eaque quasi tenetur amet maxime odit soluta ea
-                  unde molestias voluptatum, et asperiores adipisci quaerat quas
-                  vero, inventore sunt odio. Veritatis nisi praesentium illum
-                  eveniet. Possimus sapiente vitae id.
+Traveling to Amsterdam with my friends was the perfect post-graduation celebration. The city's mix of history and modern vibes had always intrigued us, and we were ready to dive in. Here's a snapshot of our first day in Amsterdam.
+
+<h5 className="text-3xl my-[30px]">Morning: Canal Cruise and Pancake Feast</h5>
+
+We started our day with a canal cruise, drifting through Amsterdam’s beautiful waterways. The boat ride was a chill way to see the city’s iconic gabled houses and bridges. After the cruise, we hit up Pancakes Amsterdam for breakfast. Their Dutch pancakes were next-level, with toppings like strawberries, whipped cream, cheese, and bacon. It was the perfect fuel for our adventures.
+
+<h5 className="text-3xl my-[30px]">Afternoon: Art, History, and Biking</h5>
+
+Our next stop was the Van Gogh Museum. Seeing his vibrant paintings up close was surreal. From there, we walked to the Anne Frank House, which was a moving experience. Walking through the secret annex where Anne Frank hid during the war gave us a powerful glimpse into history.
+
+In the afternoon, we rented bikes and rode through the city. Amsterdam is super bike-friendly, and cycling along the canals and through the bustling squares felt incredibly freeing.
+
+<h5 className="text-3xl my-[30px]">Evening: Foodhallen and Red Light District</h5>
+
+For dinner, we went to Foodhallen, a trendy indoor food market. We tried a bit of everything, from Dutch bitterballen to Vietnamese spring rolls, all while sipping on local craft beer. The place had a great vibe and was perfect for chilling out.
+
+Later, we explored the Red Light District. It was buzzing with energy and packed with tourists. We wandered through the narrow streets, soaking up the unique atmosphere and historic buildings.
+
+<h5 className="text-3xl my-[30px]">Night: Canal Reflections</h5>
+
+We wrapped up our day sitting by a quiet canal, reflecting on our amazing experiences. The water shimmered under the moonlight, and we talked about our favorite moments while planning the rest of our trip. Amsterdam had already captured our hearts, and we couldn't wait to see more.
+
+Our first day in Amsterdam was a whirlwind of art, history, food, and fun. The city’s charm and energy made it an unforgettable start to our adventure.
                 </p>
               </div>
             </div>

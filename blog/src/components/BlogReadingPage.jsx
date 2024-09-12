@@ -4,12 +4,15 @@
 import Blog from "./Blog";
 import BlogPreviewCard from "./BlogPreviewCard";
 import Container from "./container/Container";
-import HeroSlider from './HeroSlider'
-
+import HeroSlider from '../components/HeroSlider/HeroSlider';
+// import LoginForm from './LoginForm'
 
 function BlogPage() {
     return (
         <>
+                        {/* <div className=" fixed top-14 left-[34%] z-50">
+                            <LoginForm/>
+                        </div> */}
             <div className="px-2 pt-3 pb-20 bg-gradient-to-t from-[#010207] to-gray-950">
                 <Container>
                     <div className=" flex flex-col gap-10">

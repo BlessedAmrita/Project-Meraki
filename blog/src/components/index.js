@@ -4,8 +4,10 @@ import Home from "./Home/Home.jsx";
 import SignUp from "./SignUp/SignUp.jsx";
 import LogIn from "./LogIn/LogIn.jsx";
 import Loader from "./Loader/Loader.jsx";
-import Container from "./container/Container.jsx"
+import Container from "./container/Container.jsx";
 import LogoutBtn from "./Header/LogoutBtn.jsx";
+import RFHSignUp from './RHFSignUp.jsx';
+import RFHLogin from './RHFLogin.jsx';
 
 export {
     Header,
@@ -15,5 +17,8 @@ export {
     LogIn,
     Loader,
     Container,
-    LogoutBtn
+    LogoutBtn,
+    RFHSignUp,
+    RFHLogin,
+
 }

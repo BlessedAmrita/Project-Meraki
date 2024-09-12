@@ -4,7 +4,6 @@ import conf from "../conf/conf";
 export class DatabaseService {
   client = new Client();
   databases;
-  storage;
 
   constructor() {
     this.client

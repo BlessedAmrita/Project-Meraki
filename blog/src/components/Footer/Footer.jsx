@@ -30,7 +30,7 @@ function Footer() {
                 <h3>Find me at</h3>
                 <ul className="text-lg text-[#b8aeae] mt-5 flex flex-col gap-3 items-center">
                   <li className="relative hover-line cursor-pointer">
-                    NIT Rourkela,769002{" "}
+                    <Link>NIT Rourkela,769002{" "}</Link>
                   </li>
                   <img
                     src="https://res.cloudinary.com/dpmlrxlzr/image/upload/v1719914768/icons8-google-maps-old_kj59jx.svg"

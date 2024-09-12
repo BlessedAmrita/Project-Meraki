@@ -14,7 +14,7 @@ const dispatch=useDispatch()
         })
     }
   return (
-<button onClick={handleLogout}>Logout</button>  
+<button onClick={handleLogout} className=' text-xl  text-blush border-[1px] border-blush font-medium rounded-full py-2 w-[200px] text-center buttonGlow '>Logout</button>  
 )
 }
 

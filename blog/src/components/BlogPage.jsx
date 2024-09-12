@@ -3,7 +3,7 @@
 // import React from "react";
 import BlogPreviewCard from "./BlogPreviewCard";
 import Container from "./container/Container";
-import HeroSlider from "./HeroSlider";
+import HeroSlider from "../components/HeroSlider/HeroSlider";
 import { Categories } from "../content/Categories";
 
 function BlogPage() {
@@ -81,7 +81,7 @@ const RenderCategories = ({ img, title }) => {
         <img
           src={img}
           alt={title}
-          className=" absolute top-0 object-cover w-full h-full opacity-50 transition-opacity duration-500 hover:opacity-70"
+          className=" absolute top-0 object-cover w-full h-full opacity-50 transition-opacity duration-500 hover:opacity-100"
         />
         <div className="h-full w-full flex flex-col justify-center items-center px-28">
           <h3 className="text-2xl opacity-95 text-blush font-roboto tracking-wider font-normal pointer-events-none">
