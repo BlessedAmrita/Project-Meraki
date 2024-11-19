@@ -10,7 +10,7 @@ const dispatch=useDispatch()
     const handleLogout=()=>{
         authService.logout()
         .then(()=>{
-            dispatch(logout)
+            dispatch(logout())
         })
     }
   return (

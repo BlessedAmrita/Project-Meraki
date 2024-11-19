@@ -7,7 +7,7 @@ userData:null,
 }
 
 const authSlice=createSlice({
-    name:"Auth",
+    name:"auth",
     initialState,
     reducers:{
         login:(state,action)=>{
@@ -15,8 +15,9 @@ const authSlice=createSlice({
             state.userData=action.payload
         },
         logout:(state,action)=>{
-            state.userData=false
+            state.loginStatus=false
             state.userData=null
+            console.log("Logged out, state reset.");
         },
     }
 })

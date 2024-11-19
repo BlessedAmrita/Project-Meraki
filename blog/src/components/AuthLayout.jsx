@@ -1,31 +1,25 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 import {Loader} from "./index"
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
-export default function Protected({children, authentication=true}) {
-  const navigate = useNavigate()
-  const loginStatus=useSelector((state)=>state.loginStatus)
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    if(authentication && loginStatus!==authentication){
-      navigate("/login")
-    }
-    else if(!authentication && loginStatus !== authentication ){
-      navigate("/")
-    }
-    setLoading(false)
-  }, [loginStatus,navigate,authentication])
+export default function AuthLayout({ children, authentication = true }) {
+  const loginStatus = useSelector((state) => state.auth.loginStatus);
   
-  return loading ? (
-    <>
-      <Loader/>
-    </>
-  ) : (
-    <>
-      {children}
-    </>
-  );
-  
+  // Wait for loginStatus to be properly initialized
+  if (loginStatus === undefined) {
+    return <Loader />;  // You can create a Loader component to show while waiting
+  }
+  // If authentication is required but the user isn't logged in, redirect to /login
+  if (authentication && !loginStatus) {
+    return <Navigate to="/login" />;
+  }
+
+  // If authentication is not required but the user is logged in, redirect to home
+  if (!authentication && loginStatus) {
+    return <Navigate to="/" />;
+  }
+
+  // Otherwise, render the children
+  return <>{children}</>;
 }

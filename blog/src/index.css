@@ -25,5 +25,8 @@
     left: -20%;
     width: 140%;
 }
+.shadow-custom-blush {
+    box-shadow: 0 5px 100px #ffdcdc3f;
+  }
 
 }

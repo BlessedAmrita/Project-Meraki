@@ -1,39 +1,60 @@
-// import React from 'react'
-import appwriteDatabase from "../appwrite/database"
-import appwriteStorage from "../appwrite/storage"
-import {Link} from "react-router-dom"
+import databaseService from "../appwrite/database";
+import storageService from "../appwrite/storage";
 
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-function BlogPreviewCard({$id,featuredImage,title}) {
+function BlogPreviewCard({ $id, featuredImage, title }) {
+    const [imagePreview, setImagePreview] = useState("");
+    const [authorName, setAuthorName] = useState("Unknown Author");
+  
+    useEffect(() => {
+      if (featuredImage) {
+        storageService
+          .getFilePreview(featuredImage)
+          .then((preview) => {
+            setImagePreview(preview);
+          })
+          .catch((error) => {
+            console.error("Error fetching file preview: ", error);
+          });
+      }
+    }, [featuredImage]);
+  
+    useEffect(() => {
+      databaseService
+        .getPost($id) 
+        .then((document) => {
+          setAuthorName(document.author || document.userId || "Unknown Author");
+        })
+        .catch((error) => {
+          console.error("Error fetching post details: ", error);
+        });
+    }, [$id]);
+  
     return (
-        <>
-            <Link to={`/post/${$id}`}>
-            <div className="h-[450px] w-[360px]">
-                <div className="h-full w-full overflow-hidden border-b-4 border-blush relative cursor-pointer rounded-2xl transform transition-transform duration-500 hover:scale-105">
-                    <img src={appwriteStorage.getFilePreview(featuredImage)} alt={title} className='h-full w-full object-cover' />
-                    <div className="bottom absolute bottom-0 h-full w-full bg-gradient-to-t from-black to-[#00000000] ">
-                        <div className="absolute bottom-0 px-4 py-5 flex flex-col gap-2">
-                            <div className="tags nd views flex justify-between">
-                                <div className="tags flex gap-3">
-                                    <span className='inline-block text-[#a9e1ffcf]'>Travel</span>
-                                    <span className='inline-block text-[#a9e1ffcf]'>Food</span>
-                                </div>
-                                <div className="views text-[#a9e1ffcf]">Views:5</div>
-                            </div>
-                            <div className="title text-2xl font-semibold text-blush">{title}</div>
-                            <div className="text-preview text-blush">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates atque dolor tempore reprehenderit perferendis nihil accusantium quisquam quasi laborum repudiandae.</p>
-                            </div>
-                            <div className="author text-[#a9e1ff]">
-                                <p>by Author</p>
-                            </div>
-                        </div>
-                    </div>
+      <Link to={`/post/${$id}`}>
+        <div className="h-[450px] w-[360px]">
+          <div className="h-full w-full overflow-hidden border-b-4 border-blush relative cursor-pointer rounded-2xl transform transition-transform duration-500 hover:scale-105">
+            <img 
+              src={imagePreview} 
+              alt={title} 
+              className="h-full w-full object-cover" 
+            />
+            <div className="bottom absolute bottom-0 h-full w-full bg-gradient-to-t from-black to-[#00000000] flex justify-center items-center">
+              <div className="absolute bottom-0 px-4 py-5  flex-col gap-5 h-[100%] flex justify-center items-start w-full">
+                <div className="title text-2xl xl:text-4xl font-semibold text-blush ">
+                  {title}
                 </div>
+                <div className="author text-[#a9e1ff]">
+                  <p>by {authorName}</p>
+                </div>
+              </div>
             </div>
-            </Link>
-        </>
-    )
-}
-
-export default BlogPreviewCard
+          </div>
+        </div>
+      </Link>
+    );
+  }
+  
+  export default BlogPreviewCard;

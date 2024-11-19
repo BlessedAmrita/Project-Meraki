@@ -3,15 +3,11 @@ import Container from "../container/Container";
 import Lottie from "lottie-react";
 import blogAnimation from "./blogAnimation.json";
 import "./landingPage.css";
-// import LoginForm from '../LoginForm'
 
 
 function LandingPage() {
   return (
     <>
-    {/* <div className=" fixed top-14 left-[34%] z-50">
-     <LoginForm/>
-    </div> */}
       <div className="h-[750px] bg-gradient-to-t from-black to-gray-900 font-roboto">
         <Container>
           <div className="h-full flex flex-col xl:flex-row  xl:justify-between animate-reveal  ">
@@ -20,12 +16,12 @@ function LandingPage() {
                 <span>Passionate Writing,</span>
                 <span>Heartfelt Sharing</span>
               </h3>
-              <div className="mt-6 xl:my-6 text-[14px] xl:text-2xl text-blush opacity-90 tracking-widest inline-block ">
+              <div className="mt-6 xl:my-6 text-[14px] xl:text-2xl text-blush opacity-90 tracking-widest flex justify-center xl:justify-start">
                 <h5 className=" border-r-[3px] border-r-blush  typeWriter">
                   A haven for thoughtful explorers.
                 </h5>
               </div>
-              <button className="mt-9 text-xl xl:text-2xl text-blush border-[1px] border-blush font-medium rounded-full py-2 w-[200px] text-center buttonGlow mx-auto xl:mx-0">
+              <button className="mt-9 text-lg xl:text-2xl text-blush border-[1px] border-blush font-medium rounded-full py-4 xl:w-[250px] w-[180px] text-center buttonGlow mx-auto xl:mx-0">
                 Get Started
               </button>
             </div>

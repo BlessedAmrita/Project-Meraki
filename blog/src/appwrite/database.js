@@ -1,5 +1,5 @@
 import { Client, Databases, Query } from "appwrite";
-import conf from "../conf/conf";
+import conf from "../conf/conf.js";
 
 export class DatabaseService {
   client = new Client();
@@ -8,7 +8,8 @@ export class DatabaseService {
   constructor() {
     this.client
       .setEndpoint(conf.appwriteEndpoint)
-      .setEndpoint(conf.appwriteProjectId);
+      .setProject(conf.appwriteProjectId)
+      
 
     this.databases = new Databases(this.client);
   }
@@ -54,31 +55,41 @@ export class DatabaseService {
     }
   }
 
-  async getPost({ slug }) {
+  async getPost( slug ) {
     try {
-      await this.databases.getDocument(
+      const doc = await this.databases.getDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug
       );
-      return true;
+      return doc;
     } catch (error) {
       console.log("DatabaseService :: getPost :: error :: ", error);
-      return false;
     }
   }
 
+  async getAllPosts() {
+    try {
+      const result = await this.databases.listDocuments(
+        conf.appwriteDatabaseId,
+        conf.appwriteCollectionId,
+        []
+      );
+      return result;
+    } catch (error) {
+      console.log("DatabaseService :: getAllPosts :: error :: ", error);
+    }
+  }
   async getAllActivePosts() {
     try {
-      await this.databases.getDocument(
+      const result = await this.databases.listDocuments(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         [Query.equal("status", ["active"])]
       );
-      return true;
+      return result;
     } catch (error) {
       console.log("DatabaseService :: getAllActivePosts :: error :: ", error);
-      return false;
     }
   }
 }

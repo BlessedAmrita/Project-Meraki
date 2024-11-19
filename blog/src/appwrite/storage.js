@@ -8,7 +8,7 @@ export class StorageService {
   constructor() {
     this.client
       .setEndpoint(conf.appwriteEndpoint)
-      .setEndpoint(conf.appwriteProjectId);
+      .setProject(conf.appwriteProjectId);
 
     this.storage = new Storage(this.client);
   }
@@ -16,6 +16,7 @@ export class StorageService {
 
   async uploadFile(file) {
     try {
+      console.log(file);//Debugging
       return await this.storage.createFile(
         conf.appwriteBucketId,
         ID.unique(),
@@ -37,11 +38,13 @@ export class StorageService {
     }
   }
 
-  getFilePreview({ fileId }) {
+  async getFilePreview(fileId) {
     try {
-      return this.storage.getFilePreview(conf.appwriteBucketId, fileId);
+      const preview = await this.storage.getFilePreview(conf.appwriteBucketId, fileId);
+      return preview;
     } catch (error) {
       console.log("StorageService :: getFilePreview :: error :: ", error);
+      return null;
     }
   }
 }

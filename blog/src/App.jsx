@@ -4,9 +4,6 @@ import { login, logout } from "./store/authSlice";
 import authService from "./appwrite/auth";
 import { Footer, Header, Loader } from "./components/index";
 import { Outlet } from "react-router-dom";
-import BlogPage from "./components/BlogPage";
-import LandingPage from "./components/LandingPage/LandingPage";
-import LoginForm from "./components/LoginForm";
 
 function App() {
   const [loading, setLoading] = useState(true);

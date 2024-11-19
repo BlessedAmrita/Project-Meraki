@@ -17,9 +17,9 @@ function BlogPage() {
                 <Container>
                     <div className=" flex flex-col gap-10">
                         {/* //TODO:add a slider here */}
-                        <div className="top w-full h-[300px] relative">
+                        {/* <div className="top w-full h-[300px] relative">
                             <HeroSlider/>
-                        </div>
+                        </div> */}
  {/* ---------------------BLOG COMPONENT---------------------                        */}
                         <Blog/>
  {/* ---------------------BLOG COMPONENT---------------------                        */}
