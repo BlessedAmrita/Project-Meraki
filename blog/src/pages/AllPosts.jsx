@@ -82,7 +82,6 @@ function AllPosts() {
                         $id={post.$id}
                         featuredImage={post.featuredImage}
                         title={post.title}
-                        username={post.username} // Display the username if enriched
                       />
                     ))}
                   </div>
