@@ -3,9 +3,10 @@ import Container from "../container/Container";
 import Lottie from "lottie-react";
 import blogAnimation from "./blogAnimation.json";
 import "./landingPage.css";
-
+import {useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="h-[750px] bg-gradient-to-t from-black to-gray-900 font-roboto">
@@ -21,7 +22,7 @@ function LandingPage() {
                   A haven for thoughtful explorers.
                 </h5>
               </div>
-              <button className="mt-9 text-lg xl:text-2xl text-blush border-[1px] border-blush font-medium rounded-full py-4 xl:w-[250px] w-[180px] text-center buttonGlow mx-auto xl:mx-0">
+              <button onClick={() => navigate("/signup")} className="mt-9 text-lg xl:text-2xl text-blush border-[1px] border-blush font-medium rounded-full py-4 xl:w-[250px] w-[180px] text-center buttonGlow mx-auto xl:mx-0">
                 Get Started
               </button>
             </div>

@@ -13,7 +13,6 @@ function AllPosts() {
       try {
         const posts = await databaseService.getAllPosts();
 
-        // If you want to enrich posts with usernames
         const enrichedPosts = await Promise.all(
           posts.documents.map(async (post) => {
             try {
@@ -73,7 +72,7 @@ function AllPosts() {
                 <div className="top-posts"></div>
               </div>
 
-              <div className="right col-span-1 sm:col-span-6 flex justify-center animate-layoutUp">
+              <div className="right px-[20px] sm:px-0 col-span-1 sm:col-span-6 flex justify-center animate-layoutUp">
                 <div className="flex justify-center">
                   <div className="flex gap-9 flex-wrap justify-center">
                     {result.map((post) => (

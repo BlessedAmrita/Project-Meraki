@@ -34,7 +34,7 @@ function BlogPreviewCard({ $id, featuredImage, title }) {
   
     return (
       <Link to={`/post/${$id}`}>
-        <div className="h-[450px] w-[360px]">
+        <div className="sm:h-[450px] h-[400px] sm:w-[360px] w-[300px] ">
           <div className="h-full w-full overflow-hidden border-b-4 border-blush relative cursor-pointer rounded-2xl transform transition-transform duration-500 hover:scale-105">
             <img 
               src={imagePreview} 
