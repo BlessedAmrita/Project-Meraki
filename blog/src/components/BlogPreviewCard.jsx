@@ -46,9 +46,9 @@ function BlogPreviewCard({ $id, featuredImage, title }) {
                 <div className="title text-2xl xl:text-4xl font-semibold text-blush ">
                   {title}
                 </div>
-                <div className="author text-[#a9e1ff]">
+                {/* <div className="author text-[#a9e1ff]">
                   <p>by {authorName}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

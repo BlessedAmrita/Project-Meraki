@@ -3,7 +3,6 @@ import Footer from "./Footer/Footer";
 
 import Home from "./Home/Home.jsx";
 
-import LogIn from "./LogIn/LogIn.jsx";
 
 import Loader from "./Loader/Loader.jsx";
 import Container from "./container/Container.jsx";
@@ -24,7 +23,6 @@ export {
     Header,
     Footer,
     Home,
-    LogIn,
     Loader,
     Container,
     LogoutBtn,
