@@ -25,16 +25,19 @@ Check out the project here: [Project Meraki](https://meraki-sigma.vercel.app)
 2. **Navigate to the Project Directory:**  
    ```bash  
    cd Project-Meraki
-3. **Install Dependencies:**  
+3. **Navigate to the `blog` folder:**  
+   ```bash  
+   cd blog  
+4. **Install Dependencies:**  
    ```bash  
    npm install  
-4. **Run the Project Locally:**  
+5. **Run the Project Locally:**  
    ```bash  
    npm start  
-5. **Access the Application:**  
+6. **Access the Application:**  
    Open `http://localhost:3000` in your browser to explore the application.  
 
-6. **Start Exploring Features:**  
+7. **Start Exploring Features:**  
    - Create, edit, and publish blog posts using the rich text editor.  
    - Interact with the user-friendly interface and enjoy the seamless experience.  
 
